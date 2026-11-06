@@ -1,0 +1,15 @@
+{
+  "name": "Sigetec · Integración de sistemas, automatización y software a medida",
+  "short_name": "Sigetec",
+  "description": "Integración de sistemas, automatización de procesos y desarrollo de software a medida en Chile.",
+  "lang": "es-CL",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#22262b",
+  "icons": [
+    { "src": "/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/brand/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/brand/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

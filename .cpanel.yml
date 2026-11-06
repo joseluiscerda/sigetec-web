@@ -1,0 +1,9 @@
+---
+# Despliegue automático en cPanel (Git Version Control → Manage → Pull or Deploy → Deploy HEAD Commit).
+# Copia el sitio compilado (carpeta site/) a public_html. No borra archivos de otros sitios alojados en la cuenta.
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html
+    - /bin/cp -R site/. $DEPLOYPATH/
+    - /bin/chmod 755 $DEPLOYPATH
+    - /usr/bin/find $DEPLOYPATH/assets $DEPLOYPATH/pagefind -type f -exec /bin/chmod 644 {} \;

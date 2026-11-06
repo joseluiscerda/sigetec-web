@@ -15,8 +15,15 @@ El código fuente (Astro) se mantiene aparte (sigetec-web-v2-fuente.zip).
 
 Suba `sigetec-site.zip` a `public_html` y extráigalo ahí (reemplazando). Compruebe permisos 755/644.
 
+## Qué no se despliega
+
+- `public_html/.htaccess`: el de producción (redirecciones del WordPress, cabeceras solo para sigetec.cl,
+  manejador PHP 8.3 de cPanel) se mantiene en el servidor. `defaults/htaccess-referencia.txt` es solo referencia.
+- `public_html/api/`: `contacto.php` y su `.htaccess` viven en el servidor; la clave del correo está en
+  `/home/sigetec1/sigetec-web.config.php`, fuera de la carpeta pública.
+- `config/site-config.js`: se crea la primera vez; después se edita en el servidor y los despliegues no lo pisan.
+
 ## Después de publicar
 
-- Cree `public_html/api/config.php` a partir de `api/config.example.php` (correo del formulario).
 - Escriba el ID de Google Analytics en `public_html/config/site-config.js`.
 - Pruebe: portada, `/casos/`, `/integraciones/` (calculadora), `/buscar/` (buscador), `/contacto/` y una URL inexistente (404).

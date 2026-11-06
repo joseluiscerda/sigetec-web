@@ -1,18 +1,30 @@
 <!DOCTYPE html><html lang="es-CL"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Nube y mantención mensual: Azure, AWS y servicio de soporte · Sigetec</title><meta name="description" content="Alojamos y administramos integraciones y sistemas en Microsoft Azure y Amazon Web Services, migramos servidores a servicios administrados y mantenemos cada solución con un servicio mensual fijo en UF que incluye soporte, ajustes y monitoreo."><link rel="canonical" href="https://sigetec.cl/soluciones/nube/"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"><meta name="theme-color" content="#22262b"><meta name="author" content="Sigetec Asesorías Informáticas"><meta name="geo.region" content="CL-RM"><meta name="geo.placename" content="Santiago, Chile"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><meta property="og:type" content="website"><meta property="og:site_name" content="Sigetec"><meta property="og:locale" content="es_CL"><meta property="og:title" content="Nube y mantención mensual: Azure, AWS y servicio de soporte · Sigetec"><meta property="og:description" content="Alojamos y administramos integraciones y sistemas en Microsoft Azure y Amazon Web Services, migramos servidores a servicios administrados y mantenemos cada solución con un servicio mensual fijo en UF que incluye soporte, ajustes y monitoreo."><meta property="og:url" content="https://sigetec.cl/soluciones/nube/"><meta property="og:image" content="https://sigetec.cl/brand/og-default.png"><meta property="og:image:alt" content="Nube y mantención mensual: Azure, AWS y servicio de soporte · Sigetec"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Nube y mantención mensual: Azure, AWS y servicio de soporte · Sigetec"><meta name="twitter:description" content="Alojamos y administramos integraciones y sistemas en Microsoft Azure y Amazon Web Services, migramos servidores a servicios administrados y mantenemos cada solución con un servicio mensual fijo en UF que incluye soporte, ajustes y monitoreo."><meta name="twitter:image" content="https://sigetec.cl/brand/og-default.png"><link rel="sitemap" href="/sitemap-index.xml"><link rel="preload" href="/fonts/bricolage-grotesque-variable-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/ibm-plex-sans-variable-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/material-symbols-rounded-subset.woff2" as="font" type="font/woff2" crossorigin><script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","@id":"https://sigetec.cl/#organization","name":"Sigetec Asesorías Informáticas","alternateName":"Sigetec","url":"https://sigetec.cl/","logo":"https://sigetec.cl/brand/logo-3x.png","email":"contacto@sigetec.cl","telephone":"+56 9 9939 9217","foundingDate":"2010","address":{"@type":"PostalAddress","streetAddress":"Rosario Norte 555, oficina 806, Edificio Neruda","addressLocality":"Las Condes","addressRegion":"Región Metropolitana","addressCountry":"CL"},"areaServed":"CL","sameAs":[]},{"@context":"https://schema.org","@type":"WebSite","@id":"https://sigetec.cl/#website","url":"https://sigetec.cl/","name":"Sigetec","inLanguage":"es-CL","publisher":{"@id":"https://sigetec.cl/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://sigetec.cl/buscar/?q={search_term_string}"},"query-input":"required name=search_term_string"}}]</script><!-- Parámetros del sitio editables en el servidor sin recompilar (Google Analytics, etc.): /config/site-config.js --><script src="/config/site-config.js"></script><script>
       (function () {
         var cfg = window.SIGETEC_CONFIG || {};
-        var id = cfg.googleAnalyticsId;
-        if (!id || !/^G-[A-Z0-9]+$/.test(id)) return;
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
+        var gtm = /^GTM-[A-Z0-9]+$/.test(cfg.googleTagManagerId || '') ? cfg.googleTagManagerId : '';
+        var ga = /^G-[A-Z0-9]+$/.test(cfg.googleAnalyticsId || '') ? cfg.googleAnalyticsId : '';
+        if (!gtm && !ga) return;
+        var dl = (window.dataLayer = window.dataLayer || []);
+        // gtag() del sitio: deja el formato gtag para GA4 y, en cada evento, un {event: …} que GTM usa como activador.
         window.gtag = function () {
-          window.dataLayer.push(arguments);
+          dl.push(arguments);
+          if (arguments[0] === 'event') dl.push(Object.assign({ event: arguments[1] }, arguments[2] || {}));
         };
-        window.gtag('js', new Date());
-        window.gtag('config', id, { anonymize_ip: true, send_page_view: true });
+        if (gtm) {
+          dl.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var t = document.createElement('script');
+          t.async = true;
+          t.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtm;
+          document.head.appendChild(t);
+        }
+        if (ga) {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga;
+          document.head.appendChild(s);
+          window.gtag('js', new Date());
+          window.gtag('config', ga, { anonymize_ip: true, send_page_view: true });
+        }
       })();
     </script><link rel="stylesheet" href="/assets/Base.DSDUIy7R.css"><style>.page-hero[data-astro-cid-75ysl5lo]{padding:clamp(2.5rem,5vw,4.5rem) 0 clamp(2rem,4vw,3rem)}.page-hero[data-astro-cid-75ysl5lo]:not(.page-hero--carbon){border-bottom:1px solid var(--line-soft);background:linear-gradient(180deg, #fff 0%, var(--paper-2) 100%)}.page-hero--carbon[data-astro-cid-75ysl5lo]{padding-bottom:clamp(2.5rem,5vw,4rem)}.page-hero--carbon[data-astro-cid-75ysl5lo] h1[data-astro-cid-75ysl5lo]{color:#fff}.page-hero--carbon[data-astro-cid-75ysl5lo] .lede[data-astro-cid-75ysl5lo]{color:#c3cad2}.page-hero[data-astro-cid-75ysl5lo] h1[data-astro-cid-75ysl5lo]{max-width:22ch;font-size:clamp(2.1rem,4.4vw,3.4rem)}.page-hero__crumbs[data-astro-cid-75ysl5lo]{color:var(--ink-3);margin-bottom:1rem;font-size:.9rem}.page-hero--carbon[data-astro-cid-75ysl5lo] .page-hero__crumbs[data-astro-cid-75ysl5lo],.page-hero--carbon[data-astro-cid-75ysl5lo] .page-hero__crumbs[data-astro-cid-75ysl5lo] a[data-astro-cid-75ysl5lo]{color:#a7b0b9}.page-hero__eyebrow[data-astro-cid-75ysl5lo]{letter-spacing:.12em;text-transform:uppercase;color:var(--cyan-text);margin-bottom:1rem;font-size:.78rem;font-weight:600}.page-hero--carbon[data-astro-cid-75ysl5lo] .page-hero__eyebrow[data-astro-cid-75ysl5lo]{color:#7fdcff}.page-hero[data-astro-cid-75ysl5lo] .btn-row{margin-top:1.5rem}
 .cta__grid[data-astro-cid-4zgmmfpt]{align-items:center;gap:2rem;display:grid}@media (width>=900px){.cta__grid[data-astro-cid-4zgmmfpt]{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}.cta__actions[data-astro-cid-4zgmmfpt]{justify-content:flex-end}}.cta[data-astro-cid-4zgmmfpt] h2[data-astro-cid-4zgmmfpt]{max-width:22ch}.cta[data-astro-cid-4zgmmfpt] .lede[data-astro-cid-4zgmmfpt]{margin:0}.cta__actions[data-astro-cid-4zgmmfpt]{flex-wrap:wrap;gap:.75rem;display:flex}

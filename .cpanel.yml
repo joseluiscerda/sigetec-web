@@ -1,8 +1,10 @@
 ---
 # Despliegue en cPanel: Git Version Control → Manage → Pull or Deploy → Deploy HEAD Commit.
 # Copia el sitio compilado (site/) sobre public_html sin borrar nada.
-# NO se tocan (viven solo en el servidor): public_html/.htaccess, public_html/api/ (formulario
-# y su .htaccess) y la configuración del correo en /home/sigetec1/sigetec-web.config.php.
+# NO se tocan (viven solo en el servidor): public_html/.htaccess, public_html/api/contacto.php y
+# api/.htaccess (formulario) y la configuración del correo en /home/sigetec1/sigetec-web.config.php.
+# Desde la v2.4 se agrega api/consentimiento.php (registro de consentimientos de cookies, sin IP), que guarda
+# en /home/sigetec1/consentimientos/, fuera de public_html.
 # config/site-config.js (ID de Google Analytics) se crea solo si no existe; después se edita en el servidor.
 deployment:
   tasks:

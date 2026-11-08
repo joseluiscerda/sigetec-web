@@ -22,6 +22,8 @@ Suba `sigetec-site.zip` a `public_html` y extráigalo ahí (reemplazando). Compr
 - `public_html/api/contacto.php` y `api/.htaccess` viven en el servidor; la clave del correo está en
   `/home/sigetec1/sigetec-web.config.php`, fuera de la carpeta pública. El único archivo que el despliegue agrega en
   `api/` es `consentimiento.php` (v2.4), que registra cada elección de cookies en `/home/sigetec1/consentimientos/`.
+  El `api/.htaccess` del servidor solo sirve los PHP de su lista: desde el 8-nov-2026 permite `contacto.php` y
+  `consentimiento.php` (respaldo anterior: `api/.htaccess.v23-respaldo-2026-11-08`).
 - `config/site-config.js`: se crea la primera vez; después se edita en el servidor y los despliegues no lo pisan.
 
 ## Después de publicar
